@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-lg-12"> 
+    <!-- <h1 class="page-header">Start Test</h1>  -->
+    </div>
+</div> 
+<!--/.row -->
+
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><svg class="glyph stroked email"><use xlink:href="#stroked-email"></use></svg> Select category to Start Test:</div>
+            <div class="panel-body">
+                    <select (change) = startTest()   [(ngModel)]="selectedOption"  id="category_name" name="category_name"  class="form-control">
+                        <option value="Aptitude" >Aptitude</option>
+                        <option value="AspNet" >Asp.Net</option>
+                        <option value="C Sharp" >C Sharp</option>
+                        <option value="Design Patterns" >Design Patterns</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Reasoning">Reasoning</option>
+                        <option value="General">General</option>
+                        <option value="Arithmatic">Arithmatic</option>
+                    </select>
+
+                          <h3>Choosen Category: {{ selectedOption }}</h3>
+
+                          <div *ngFor = "let que of questions">
+                              <p><b>Q: {{que.question_text}}</b></p>
+                              <div class="form-group">
+                                  <!-- <label>Radio Buttons</label> -->
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>{{que.question_answer}}
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                      {{que.question_option_one}}
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">{{que.question_option_two}}
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">{{que.question_option_three}}
+                                    </label>
+                                  </div>
+                                </div>
+                    
+
+
+                          </div> <!-- ng for ends here-->
+                          
+
+                          <div class="form-group">
+                              <div class="col-md-12 widget-right">
+                                  <button type="button" (click) = submitTest() class="btn btn-default btn-md pull-right">Submit Test</button>
+                              </div>
+                          </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,88 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Add Questions</h1>
+    </div>
+</div>
+<!--/.row-->
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="panel panel-default">
+            <div class="panel-heading"><svg class="glyph stroked email"><use xlink:href="#stroked-email"></use></svg> Fill Below Form to Add Question:</div>
+            <div class="panel-body">
+                <form class="form-horizontal" encrypt="multipart/form-data" action="" method="post" [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+
+                 <input class="ng-hide" type="file" name="mobibit" />
+
+                    <fieldset>
+                        <!-- Name input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Question:</label>
+                            <div class="col-md-9">
+                                <input id="question" formControlName="question" name="question" type="text" placeholder="Your name" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- category input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="Category">Choose Category</label>
+                            <div class="col-md-9">
+                                <select name="category_name" formControlName="category_name" class="form-control">
+                      <option value="Aptitude" >Aptitude</option>
+                      <option value="AspNet" >Asp.Net</option>
+                      <option value="C Sharp" >C Sharp</option>
+                      <option value="Design Patterns" >Design Patterns</option>
+                      <option value="PHP">PHP</option>
+                      <option value="Reasoning">Reasoning</option>
+                      <option value="General">General</option>
+                      <option value="Arithmatic">Arithmatic</option>
+                    </select>
+                            </div>
+                        </div>
+
+                        <!-- Answer input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Answer:</label>
+                            <div class="col-md-9">
+                                <input id="answer" name="answer" formControlName="answer" type="text" placeholder="Your Answer" class="form-control">
+                            </div>
+                        </div>
+
+
+                        <!-- Option input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Option 1:</label>
+                            <div class="col-md-9">
+                                <input id="option_one" formControlName="option_one" name="option_one" type="text" placeholder="Your Option" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Option input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Option 2:</label>
+                            <div class="col-md-9">
+                                <input id="option_two" formControlName="option_two" name="option_two" type="text" placeholder="Your Option" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Option input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Option 3:</label>
+                            <div class="col-md-9">
+                                <input id="option_three" formControlName="option_three" name="option_three" type="text" placeholder="Your Option" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Form actions -->
+                        <div class="form-group">
+                            <div class="col-md-12 widget-right">
+                                <button type="submit" class="btn btn-default btn-md pull-right" [disabled]="!questionForm.valid">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
