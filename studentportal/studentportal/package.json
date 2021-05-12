@@ -22,7 +22,7 @@
     "@angular/router": "^6.1.10",
     "angular-svg-round-progressbar": "^2.0.0",
     "body-parser": "^1.19.0",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "core-js": "^2.5.4",
     "form-data": "^2.3.3",
     "fs": "0.0.1-security",
